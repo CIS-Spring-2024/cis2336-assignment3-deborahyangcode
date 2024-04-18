@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <! This portion shows the title,character set and links to the js and css files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <script src="Menu.js" defer></script> 
+    <title>About - University of Houston Sugar Land Cafeteria</title>
+</head>
+<body>
+    <header>
+        <h1>University of Houston Sugar Land Ellis Dining Hall</h1>
+        <! will appear as the the browsers title tab-->
+    </header>
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="Menu.html" class="active">Menu</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+        <! will show the different pages of this site -->
+    </div>
+    <figure> <!--home section photo --!>
+        <img src="image/Ellis Dining Hall.jpg" height="500" width "400" ="Ellis">
+        <! will appear above the menu selection-->
+      </figure>
+      <div class="container">
+      <main>
+<section id="breakfast"> 
+            <h2>Breakfast Options</h2>
+            <div class="menu">
+                <div class="item">
+                    <img src="/image/waffle.jpg" alt="Waffles" class="hover-move">
+                    <p>Waffles</p>
+                    <p>$5.99</p>
+                    <button class="pill" type="button" onclick="addToCart ('Waffles', 5.99)">Add to Cart</button>
+                    <! by defining the class of item allows me to add a name,price, and button to each item-->
+                </div>
+                <div class="item">
+                    <img src="/image/omlette.jpg" alt="Omelette" class="hover-move">
+                    <p>Omelette</p>
+                    <p>$5.99</p>
+                    <button class="pill" type="button" onclick="addToCart('Omelette', 5.99)">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="/image/breakfast_plate.jpg" alt="Breakfast Plate" class="hover-move">
+                    <p>Breakfast Plate</p>
+                    <p>$9.99</p>
+                    <button class="pill" type="button" onclick="addToCart('Breakfast Plate', 9.99)">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="/image/vegan_burr.jpg" alt="Vegan Breakfast Burrito" class="hover-move">
+                    <p>Vegan Breakfast Burrito</p>
+                    <p>$7.99</p>
+                    <button class="pill" type="button" onclick="addToCart('Vegan Breakfast Burrito', 7.99)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="lunch">
+            <h2>Lunch Options</h2>
+            <div class="menu">
+                <div class="item">
+                    <img src="/image/chicken.jpg" alt="Chicken Tenders" class="hover-move">
+                    <p>Chicken Tenders</p>
+                    <p>$7.99</p>
+                    <button class="pill" type="button" onclick="addToCart('Chicken Tenders', 7.99)">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="/image/burger.jpg" alt="Cheeseburger" class="hover-move">
+                    <p>Cheeseburger</p>
+                    <p>$7.99</p>
+                    <button class="pill" type="button" onclick="addToCart('Cheeseburger', 7.99)">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="/image/pizza.jpg" alt="Slice of Pizza" class="hover-move">
+                    <p>Slice of Pizza</p>
+                    <p>$2.99</p>
+                    <button class="pill" type="button" onclick="addToCart('Slice of Pizza', 2.99)">Add to Cart</button>
+                </div>
+                <div class="item">
+                    <img src="/image/salad.jpg" alt="Ceaser Chicken Salad" class="hover-move">
+                    <p>Ceaser Chicken Salad</p>
+                    <p>$7.99</p>
+                    <button class="pill" type="button" onclick="addToCart('Ceaser Chicken Salad', 7.99)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="dinner">
+          <h2>Dinner Options</h2>
+          <div class="menu">
+              <div class="item">
+                  <img src="/image/soup.jpg"alt="Baked Potato Soup" class="hover-move">
+                  <p>Baked Potato Soup</p>
+                  <p>$5.99</p>
+                  <button class="pill" type="button" onclick="addToCart('Baked Potato Soup', 5.99)">Add to Cart</button>
+              </div>
+              <div class="item">
+                <img src="/image/barbecue.jpg"  alt="Barbecue Chicken Plate" class="hover-move">
+                <p>Barbecue Chicken</p>
+                  <p>$9.99</p>
+                  <button class="pill" type="button" onclick="addToCart('Barbecue Chicken', 1.99)">Add to Cart</button>
+              </div>
+              <div class="item">
+                  <img src="/image/Spaghetti.jpg"  alt="Spaghetti" class="hover-move">
+                  <p>Spaghetti</p>
+                  <p>$8.99</p>
+                  <button class="pill" type="button" onclick="addToCart('Spaghetti', 8.99)">Add to Cart</button>
+              </div>
+              <div class="item">
+                  <img src="/image/salmon.jpg" alt="Salmon" class="hover-move">
+                  <p>Salmon</p>
+                  <p>$11.99</p>
+                  <button class="pill" type="button" onclick="addToCart('Salmon', 11.99)">Add to Cart</button>
+              </div>
+          </div>
+      </section>
+    </main>
+    <div class="menu-selection">
+      <a href="#breakfast">Breakfast</a>
+      <a href="#lunch">Lunch</a>
+      <a href="#dinner">Dinner</a>
+      <! I wanted the user to only see what they want so they can click on one of these options and see whats available-->
+  </div>
+    <aside id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be inserted added here -->
+        </ul>
+        <p id="calculateTotal">Total: $0.00</p>
+        <button class="pill" type="button" onclick="calculateTotal()">Pay Now</button>
+        <! The cart feature allows the items to be added, counted and see the total cost of all thats in the cart -->
+    </aside>
+</body>
+</html>
